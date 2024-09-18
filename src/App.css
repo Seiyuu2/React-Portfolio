@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  min-height: 100vh; /* Ensures the App container covers the full viewport height */
+  display: flex;
+  flex-direction: column; /* Allows content to be stacked vertically */
+  position: relative; /* or absolute if needed */
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -12,10 +16,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/***** Header/About me *****/ 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,9 +28,125 @@
   color: white;
 }
 
+.App-header:Hover {
+  transform: scale(1.05); /* Hover effect: Slight scaling */
+}
+
+
+
+
+
+/***** About me *****/ 
+
+.rounded-circle {
+  width: 250px; /* Adjust as needed */
+  height: 250px; /* Adjust as needed */
+}
+
+.rounded-circle:hover {
+  transform: scale(1.05); /* Hover effect: Slight scaling */
+}
+
+
+
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("portbackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px); 
+}
+
+.jumbotron {
+  position: relative;
+  z-index: 1; 
+  color: #FCA311 ;
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  z-index: -1; 
+}
+
+.container.content {
+  position: relative; 
+}
+
+
+/***** Body/Portfolios *****/ 
 .App-link {
   color: #61dafb;
 }
+
+.App-body {
+  margin-top: 50px;
+  position: fill;
+  background-color: #282c34; /* Sets the background color */
+  color: white;
+  padding: 20px; /* Adds some padding around the text */
+  min-height: 10vh; /* Ensure it does not push content */
+  
+}
+/***** PortfolioText *****/ 
+
+.writing-portfolios {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background similar to your jumbotron */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px; /* Optional: rounded corners */
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px); /* Blurs the content behind */
+  color: white;
+  z-index: 1; /* Ensures it stays above background */
+}
+
+.writing-portfolios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("portbackground.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3; /* Adjust transparency as needed */
+}
+
+.writing-portfolios h2 {
+  font-size: 2.5rem; /* Large text */
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.writing-portfolios:hover {
+  transform: scale(1.05); /* Hover effect: Slight scaling */
+}
+
+.writing-portfolios h2:hover {
+  color: #f0a500; /* Hover effect: Change text color */
+}
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +156,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+

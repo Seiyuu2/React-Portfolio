@@ -1,0 +1,76 @@
+.card {
+    background-color: #2c2e3a;
+    margin: 20px auto; /* Center the card */
+    color: whitesmoke;
+    max-width: 300px; /* Set a maximum width for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+    border-radius: 10px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.card-body {
+    color: whitesmoke;
+}
+
+.card-img-top {
+    width: 100%; /* Make the image responsive to the card width */
+    height: auto; 
+    object-fit: cover; 
+    border-top-left-radius: 10px; /* Optional: Match card's rounded corners */
+    border-top-right-radius: 10px; 
+}
+
+.card:hover {
+    background-color: #b3b4bd;
+    transform: scale(1.06); /* Slight hover effect */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Align cards to the center */
+    gap: 20px; /* Add space between the cards */
+    flex-wrap: wrap; /* Ensure the cards wrap to a new row on smaller screens */
+}
+
+
+/***** Portfolio Card Container *****/ 
+
+.cards-wrapper {
+    background-color: rgba(44, 46, 58, 0.6); /* Translucent background */
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1500px; /* Adjust the max-width as needed */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    backdrop-filter: blur(10px); /* Blur effect */
+    background-image: url('portbackground.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the whole container */
+    background-position: center; /* Center the image */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Keep it in front */
+    position: relative;
+}
+
+.cards-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darken background for readability */
+    backdrop-filter: blur(10px); /* Consistent blur */
+    border-radius: 15px;
+    z-index: -1; /* Keep background behind content */
+}
+
+.cards-wrapper:hover {
+    transform: scale(1.02); /* Slight hover effect */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Align cards to the center */
+    gap: 20px; /* Add space between the cards */
+    flex-wrap: wrap; /* Ensure the cards wrap to a new row on smaller screens */
+}
