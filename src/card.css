@@ -74,3 +74,22 @@
     gap: 20px; /* Add space between the cards */
     flex-wrap: wrap; /* Ensure the cards wrap to a new row on smaller screens */
 }
+
+/* Modal Content (volume slider) */
+
+.modal-content-wrapper {
+    text-align: center; /* Center align the content */
+  }
+  
+  .modal-title {
+    font-size: 2rem; /* Make the title large */
+    font-weight: bold;
+    font-family: Garamond;
+    margin-bottom: 20px; /* Add some space below the title */
+  }
+  
+  .modal-content {
+    font-size: 1rem;
+    font-family: Garamond;
+    margin-bottom: 15px; /* Add space between the paragraphs */
+  }
