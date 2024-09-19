@@ -3,14 +3,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './card.css';
 
-export function TestComponent({ title, img, onClick, modcontent, modcontent2 }) {
+export function TestComponent({ title, img, onClick, modcontent, modcontent2,cardsynopsis }) {
   return (
     <div className="card-group">
       <div className="card">
         <img className="card-img-top" src={img} alt="Card img cap" />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">Eternity is rarely a blessing <br /> "Til Death do us part? I'm afraid it shall, my dear."</p>
+          <p className="card-text">{cardsynopsis}</p>
           <div className="d-grid gap-2">
             <button
               type="button"
