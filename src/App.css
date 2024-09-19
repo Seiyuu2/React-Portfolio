@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  min-height: 100vh; /* Ensures the App container covers the full viewport height */
+  display: flex;
+  flex-direction: column; /* Allows content to be stacked vertically */
+  position: relative; 
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -12,10 +16,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/***** Header/About me *****/ 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,9 +28,272 @@
   color: white;
 }
 
+.App-header:Hover {
+  transform: scale(1.05); 
+}
+
+
+.lead.quote {
+  color: #FCA311; 
+  font-size: 1.25rem; 
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+/***** About me *****/ 
+
+.rounded-circle {
+  width: 250px; 
+  height: 250px; 
+}
+
+.rounded-circle:hover {
+  transform: scale(1.05); /* Hover effect: Slight scaling */
+}
+
+
+
+
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("portbackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px); 
+}
+
+.jumbotron {
+  position: relative;
+  z-index: 1; 
+  color: #FCA311 ;
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  z-index: -1; 
+}
+
+.jumbotron-heading {
+  font-size: 2.5rem; 
+}
+
+/* About Me Paragraphs */
+.content p {
+  font-size: 1.0rem; 
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.container.content {
+  position: relative; 
+}
+
+
+/***** Body/Portfolios *****/ 
 .App-link {
   color: #61dafb;
 }
+
+.card-title {
+  text-align: center; 
+  font-size: 1.5rem; 
+}
+
+
+.App-body {
+  margin-top: 50px;
+  position: fill;
+  background-color: #282c34; 
+  color: white;
+  padding: 20px; 
+  min-height: 10vh; 
+  
+}
+/***** PortfolioText *****/ 
+.card-text {
+  margin-top: 15px;
+  text-align: center; /* Center the text */
+  font-size: 1.2rem; /* Increase the font size */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.writing-portfolios {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px); 
+  color: white;
+  z-index: 1; 
+}
+
+.writing-portfolios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("portbackground.jpg"); 
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3; 
+}
+
+.writing-portfolios h2 {
+  font-size: 2.5rem; 
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.writing-portfolios:hover {
+  transform: scale(1.05); 
+}
+
+.writing-portfolios h2:hover {
+  color: #f0a500; 
+}
+
+
+/* Container for the audio controls */
+.audio-controls {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: rgba(100, 100, 100, 0.027); 
+  border-radius: 10px; 
+  margin-top: 20px; 
+  max-width: 300px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.audio-controls button, .audio-controls input {
+  margin: 5px; 
+}
+
+/* Style for the range input (volume slider) */
+.audio-controls input[type="range"] {
+  width: 80%; 
+}
+
+.audio-button {
+  background-color: #333; 
+  color: #FCA311; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 1rem; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.audio-button:hover {
+  background-color: #555; 
+  color: #FFBF00;
+}
+
+.audio-button:focus {
+  outline: none; 
+}
+
+
+/* Contact */
+.contact-section {
+  padding: 40px 0;
+  background-color: transparent;
+  color: #fca311;
+}
+
+.contact-wrapper {
+  background-color: rgba(44, 46, 58, 0.6); 
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  background-image: url('portbackground.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  transition: transform 0.3s ease-in-out;
+  z-index: 1; 
+  position: relative;
+}
+
+.contact-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  z-index: -1; 
+}
+
+.contact-wrapper:hover {
+  transform: scale(1.02); 
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #fca311;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #f08f00;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +303,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
