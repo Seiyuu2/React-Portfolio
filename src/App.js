@@ -89,7 +89,7 @@ function App() {
         <div className="cards-wrapper">
           <div className="card-container">
           <TestComponent 
-  title="Port1" 
+  title="Today's Truth, Tommorow's Lie" 
   img={port1} 
   onClick={openModal} 
   cardsynopsis={<p className="card-text">Eternity is rarely a blessing <br /> "Til Death do us part? I'm afraid it shall, my dear."</p>}
@@ -110,7 +110,7 @@ function App() {
 
 
 <TestComponent 
-  title="Port2" 
+  title="The Lie and Journey's End" 
   img={port2} 
   onClick={openModal} 
   cardsynopsis={<p className="card-text">A Lie, no matter how beautiful, no matter how exquisite. Will remain a lie.</p>}
@@ -131,7 +131,7 @@ function App() {
 
 
 <TestComponent 
-  title="Port3" 
+  title="The Cycle of Sacrifice" 
   img={port3} 
   onClick={openModal} 
   cardsynopsis={<p className="card-text">A Duty at world's End, a Blind faith to carry the burden. <br /> Heroism? Or Foolishness.</p>}
